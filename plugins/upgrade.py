@@ -6,30 +6,30 @@ from pyrogram import Client , filters
 
 @Client.on_callback_query(filters.regex('upgrade'))
 async def upgrade(bot,update):
-    text = """**Free Plan User**
-Daily  Upload limit 5GB
-Price 0
+    text = """** Plan Gratuit User**
+Limite de téléchargement quotidienne : 5 Go.
+Prix 0
 
 **🪙 Basic**
-Daily  Upload  limit 20GB
-Price Rs 49  ind /🌎 0.59$  per Month
+Limite de téléchargement quotidienne : 20 Go  
+Prix : 1000F $ par mois.
 
 **⚡ Standard**
-Daily Upload limit 50GB
-Price Rs 99  ind /🌎 1.19$  per Month
+Limite de téléchargement quotidienne : 50 Go  
+Prix : 1500F par mois.
 
 **💎 Pro**
-Daily Upload limit 100GB
-Price Rs 179  ind /🌎 2.16$  per Month
+Limite de téléchargement quotidienne : 100 Go  
+Prix : 2000F par mois.
 
 Payment Details :-
 <b>➜ UPI ID :</b> <code>TechifyBots@UPI</code>
 
-After Payment Send Screenshots Of Payment To Admin @CallOwnerBot"""
+Après le paiement, envoyez des captures d'écran du paiement à l'administrateur @Kingcey."""
     
     keybord = InlineKeyboardMarkup([
-        [InlineKeyboardButton("🦋 Admin", url = "https://telegram.me/CallOwnerBot"),
-        InlineKeyboardButton("✖️ Cancel", callback_data="cancel")]
+        [InlineKeyboardButton("🦋 Admin", url = "https://telegram.me/Kingcey"),
+        InlineKeyboardButton("✖️ Annuler", callback_data="cancel")]
         ])
     
     await update.message.edit(text = text,reply_markup = keybord, disable_web_page_preview=True)
@@ -39,29 +39,29 @@ After Payment Send Screenshots Of Payment To Admin @CallOwnerBot"""
 @Client.on_message(filters.private & filters.command(["upgrade"]))
 async def upgradecm(bot,message):
     text = """**Free Plan User**
-Daily  Upload limit 5GB
-Price 0
+Limite de téléchargement quotidienne : 5 Go.
+Prix 0
 
 **🪙 Basic**
-Daily  Upload  limit 20GB
-Price Rs 49  ind /🌎 0.59$  per Month
+Limite de téléchargement quotidienne : 20 Go  
+Prix : 1000F $ par mois.
 
 **⚡ Standard**
-Daily Upload limit 50GB
-Price Rs 99  ind /🌎 1.19$  per Month
+Limite de téléchargement quotidienne : 50 Go  
+Prix : 1500F par mois.
 
 **💎 Pro**
-Daily Upload limit 100GB
-Price Rs 179  ind /🌎 2.16$  per Month
+Limite de téléchargement quotidienne : 100 Go  
+Prix : 2000F par mois.
 
 Payment Details :-
 <b>➜ UPI ID :</b> <code>TechifyBots@UPI</code>
 
-After Payment Send Screenshots Of Payment To Admin @CallOwnerBot"""
+Après le paiement, envoyez des captures d'écran du paiement à l'administrateur @Kingcey"""
     
     keybord = InlineKeyboardMarkup([
-        [InlineKeyboardButton("🦋 Admin", url = "https://telegram.me/CallOwnerBot"),
-        InlineKeyboardButton("✖️ Cancel", callback_data="cancel")]
+        [InlineKeyboardButton("🦋 Admin", url = "https://telegram.me/kingcey"),
+        InlineKeyboardButton("✖️ Annuler", callback_data="cancel")]
         ])
     
     await message.reply_text(text=text, reply_markup=keybord, quote=True, disable_web_page_preview=True)
