@@ -12,14 +12,14 @@ async def viewthumb(client,message):
     if thumb :
         await client.send_photo(message.chat.id,photo =f"{thumb}")
     else:
-        await message.reply_text("You Don't Have Any Thumbnail ❌")
+        await message.reply_text("Vous N'Avez Pas De Vignette ❌")
 	
     
 	 
 @Client.on_message(filters.private & filters.command(['delthumb']))
 async def removethumb(client,message):
     delthumb(int(message.chat.id))
-    await message.reply_text("Thumbnail Deleted Successfully 🗑️")
+    await message.reply_text("Vignette Supprimée Avec Succès 🗑️")
 
 
 
@@ -27,4 +27,4 @@ async def removethumb(client,message):
 async def addthumbs(client,message):
     file_id = str(message.photo.file_id)
     addthumb(message.chat.id , file_id)
-    await message.reply_text("Thumbnail Saved Successfully ✅")
+    await message.reply_text("Miniature Enregistrée Avec Succès ✅")
