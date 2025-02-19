@@ -29,18 +29,18 @@ async def start(client, message):
     except IndexError:
         id = None
 
-    loading_sticker_message = await message.reply_sticker("CAACAgUAAxkBAAJ93Wb23tu2uAf_XIY2qORqOoURNsPTAAIoEQACQVaxV35FIcz8xQdgNgQ")
+    loading_sticker_message = await message.reply_sticker("CAACAgUAAxkBAAIBoGe2AAFJpTLoqg2V3dWLqmXr1oFdCgACMg0AAgmU0FYjrFvAURaVLB4E")
     await asyncio.sleep(2)
     await loading_sticker_message.delete()
     
-    text = f"""{message.from_user.mention} \nɪ  ᴀᴍ  ᴀɴ  ᴀᴅᴠᴀɴᴄᴇ  ꜰɪʟᴇ  ʀᴇɴᴀᴍᴇʀ  ᴀɴᴅ  ᴄᴏɴᴠᴇʀᴛᴇʀ  ʙᴏᴛ  ᴡɪᴛʜ  ᴘᴇʀᴍᴀɴᴇɴᴛ  ᴀɴᴅ  ᴄᴜsᴛᴏᴍ  ᴛʜᴜᴍʙɴᴀɪʟ  sᴜᴘᴘᴏʀᴛ.\n\nᴊᴜsᴛ  sᴇɴᴅ  ᴍᴇ  ᴀɴʏ  ᴠɪᴅᴇᴏ  ᴏʀ ᴅᴏᴄᴜᴍᴇɴᴛ !!\nᴏᴡɴᴇʀ @TechifyBots</b>"""
+    text = f"""{message.from_user.mention} \nJe <b> suis un outil avancé de renommage de fichiers et de conversion, avec un support de vignettes permanentes et personnalisées..\n\nJuste envoie-moi n'importe quelle vidéo ou document. !!\n<blockquote>Proprio @BotZFlix</b></blockquote>"""
     
     button = InlineKeyboardMarkup([
-        [InlineKeyboardButton("📢 Updates", url="https://telegram.me/TechifyBots"),
-        InlineKeyboardButton("💬 Support", url="https://telegram.me/TechifySupport")],
-        [InlineKeyboardButton("🛠️ Help", callback_data='help'),
+        [InlineKeyboardButton("📢 Updates", url="https://telegram.me/BotZFlix"),
+        InlineKeyboardButton("💬 Support", url="https://telegram.me/BotZFlixSupport")],
+        [InlineKeyboardButton("🛠️ Aide", callback_data='help'),
         InlineKeyboardButton("❤️‍🩹 About", callback_data='about')],
-        [InlineKeyboardButton("🧑‍💻 Developer 🧑‍💻", url="https://telegram.me/TechifyBots")]
+        [InlineKeyboardButton("🧑‍💻 Developer 🧑‍💻", url="https://telegram.me/kingcey")]
         ])
     
     await message.reply_photo(
@@ -65,12 +65,12 @@ async def send_doc(client, message):
         except UserNotParticipant:
             _newus = find_one(message.from_user.id)
             user = _newus["usertype"]
-            await message.reply_text("<b>Hello Dear \n\nYou Need To Join In My Channel To Use Me\n\nKindly Please Join Channel</b>",
+            await message.reply_text("<b>Salut Mon cher \n\nTu dois rejoindre ma chaîne pour m'utiliser.\n\nVeuillez gentiment rejoindre la chaîne.</b>",
                                      reply_to_message_id=message.id,
                                      reply_markup=InlineKeyboardMarkup([
-                                         [InlineKeyboardButton("🔺 Update Channel 🔺", url=f"https://t.me/{FORCE_SUBS}")]
+                                         [InlineKeyboardButton("🔺 Rejoindre 🔺", url=f"https://t.me/{FORCE_SUBS}")]
                                          ]))
-            await client.send_message(LOG_CHANNEL, f"<b><u>New User Started The Bot</u></b> \n\n<b>User ID :</b> <code>{user_id}</code> \n<b>First Name :</b> {message.from_user.first_name} \n<b>Last Name :</b> {message.from_user.last_name} \n<b>User Name :</b> @{message.from_user.username} \n<b>User Mention :</b> {message.from_user.mention} \n<b>User Link :</b> <a href='tg://openmessage?user_id={user_id}'>Click Here</a> \n<b>User Plan :</b> {user}")
+            await client.send_message(LOG_CHANNEL, f"<b><u>Un utilisateur a demmaré le bot.</u></b> \n\n<b>User ID :</b> <code>{user_id}</code> \n<b>First Name :</b> {message.from_user.first_name} \n<b>Last Name :</b> {message.from_user.last_name} \n<b>User Name :</b> @{message.from_user.username} \n<b>User Mention :</b> {message.from_user.mention} \n<b>User Link :</b> <a href='tg://openmessage?user_id={user_id}'>Click Here</a> \n<b>User Plan :</b> {user}")
             return
 		
     botdata(int(botid))
@@ -94,7 +94,7 @@ async def send_doc(client, message):
     conversion = datetime.timedelta(seconds=left)
     ltime = str(conversion)
     if left > 0:
-        await message.reply_text(f"<b>Sorry Dude I Am Not Only For You \n\nFlood Control Is Active So Please Wait For {ltime} </b>", reply_to_message_id=message.id)
+        await message.reply_text(f"<b>Désolé, je ne suis pas seulement pour toi. \n\nLe contrôle de saturation est actif, donc veuillez attendre. {ltime} </b>", reply_to_message_id=message.id)
     else:
         # Forward a single message
         media = await client.get_messages(message.chat.id, message.id)
@@ -121,21 +121,21 @@ async def send_doc(client, message):
             
             if STRING_SESSION:
                 if buy_date == None:
-                    await message.reply_text(f"You Can't Upload More Than 2GB File.\n\nYour Plan Doesn't Allow To Upload Files That Are Larger Than 2GB.\n\nUpgrade Your Plan To Rename Files Larger Than 2GB.", reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton("💳 Upgrade", callback_data="upgrade")]]))
+                    await message.reply_text(f"Vous ne pouvez pas télécharger un fichier de plus de 2 Go..\n\nVotre plan ne permet pas de télécharger des fichiers de plus de 2 Go.\n\nMettez à niveau votre plan pour renommer des fichiers de plus de 2 Go.", reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton("💳 Mettre à jour", callback_data="upgrade")]]))
                     return
                 pre_check = check_expi(buy_date)
                 if pre_check == True:
-                    await message.reply_text(f"""__What Do You Want Me To Do With This File ?__\n\n**File Name :** `{filename}`\n**File Size :** {humanize.naturalsize(file.file_size)}\n**DC ID :** {dcid}""", reply_to_message_id=message.id, reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton("📝 Rename", callback_data="rename"), InlineKeyboardButton("✖️ Cancel", callback_data="cancel")]]))
+                    await message.reply_text(f"""__Que veux-tu que je fasse avec ce fichier ?__\n\n**Nom du fichier :** `{filename}`\n**Poids du fichier :** {humanize.naturalsize(file.file_size)}\n**DC ID :** {dcid}""", reply_to_message_id=message.id, reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton("📝 Renommer", callback_data="rename"), InlineKeyboardButton("✖️ Annuler", callback_data="cancel")]]))
                     total_rename(int(botid), prrename)
                     total_size(int(botid), prsize, file.file_size)
                 else:
                     uploadlimit(message.from_user.id, 2147483648)
                     usertype(message.from_user.id, "Free")
 
-                    await message.reply_text(f'Your Plan Expired On {buy_date}', quote=True)
+                    await message.reply_text(f'Votre plan a expiré le {buy_date}', quote=True)
                     return
             else:
-                await message.reply_text("You Can't Upload More Than 2GB File.\n\nYour Plan Doesn't Allow To Upload Files That Are Larger Than 2GB.\n\nUpgrade Your Plan To Rename Files Larger Than 2GB.", reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton("💳 Upgrade", callback_data="upgrade")]]))
+                await message.reply_text("Vous ne pouvez pas télécharger un fichier de plus de 2 Go.\n\nVotre plan ne permet pas de télécharger des fichiers de plus de 2 Go.\n\nMettez à niveau votre plan pour renommer des fichiers de plus de 2 Go.", reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton("💳 Mettre à jour", callback_data="upgrade")]]))
                 return
         else:
             if buy_date:
@@ -149,5 +149,5 @@ async def send_doc(client, message):
             total_rename(int(botid), prrename)
             total_size(int(botid), prsize, file.file_size)
             await message.reply_text(f"""__What Do You Want Me To Do With This File ?__\n\n**File Name :** `{filename}`\n**File Size :** {filesize}\n**DC ID :** {dcid}""", reply_to_message_id=message.id, reply_markup=InlineKeyboardMarkup(
-                [[InlineKeyboardButton("📝 Rename", callback_data="rename"),
-                  InlineKeyboardButton("✖️ Cancel", callback_data="cancel")]]))
+                [[InlineKeyboardButton("📝 Renommer", callback_data="rename"),
+                  InlineKeyboardButton("✖️ Annuler", callback_data="cancel")]]))
