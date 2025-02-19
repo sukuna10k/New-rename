@@ -11,7 +11,7 @@ from config import *
 async def about(bot,update):
     text = script.ABOUT_TXT.format(bot.me.mention)
     keybord = InlineKeyboardMarkup([  
-                    [InlineKeyboardButton("🔙 Back",callback_data = "home")]
+                    [InlineKeyboardButton("🔙 Retour",callback_data = "home")]
                   ])
     await update.message.edit(text = text,reply_markup = keybord)
 
@@ -21,8 +21,8 @@ async def about(bot,update):
 async def donatecm(bot,message):
     text = script.DONATE_TXT
     keybord = InlineKeyboardMarkup([
-        [InlineKeyboardButton("🦋 Admin",url = "https://telegram.me/CallOwnerBot"),
-        InlineKeyboardButton("✖️ Close",callback_data = "cancel") ]])
+        [InlineKeyboardButton("🦋 Admin",url = "https://telegram.me/Kingcey"),
+        InlineKeyboardButton("✖️ Annuler",callback_data = "cancel") ]])
     await message.reply_text(text = text,reply_markup = keybord)    
 
 
@@ -40,10 +40,10 @@ async def admincm(bot,message):
 async def help(bot,update):
     text = script.HELP_TXT.format(update.from_user.mention)
     keybord = InlineKeyboardMarkup([ 
-                    [InlineKeyboardButton('🏞 Thumbnail', callback_data='thumbnail'),
-                    InlineKeyboardButton('✏ Caption', callback_data='caption')],
+                    [InlineKeyboardButton('🏞 Vignette', callback_data='thumbnail'),
+                    InlineKeyboardButton('✏ Légende', callback_data='caption')],
                     [InlineKeyboardButton('🏠 Home', callback_data='home'),
-                    InlineKeyboardButton('💵 Donate', callback_data='donate')]
+                    InlineKeyboardButton('💵 Don', callback_data='donate')]
                    ])
     await update.message.edit(text = text,reply_markup = keybord)
 
@@ -53,7 +53,7 @@ async def help(bot,update):
 async def thumbnail(bot,update):
     text = script.THUMBNAIL_TXT
     keybord = InlineKeyboardMarkup([  
-                    [InlineKeyboardButton("🔙 Back",callback_data = "help")]
+                    [InlineKeyboardButton("🔙 Retour",callback_data = "help")]
 		  ])
     await update.message.edit(text = text,reply_markup = keybord)
 
@@ -78,10 +78,10 @@ async def donate(bot,update):
 async def home_callback_handler(bot, query):
     text = f"""{query.from_user.mention} \n<b>ɪ  ᴀᴍ  ᴀɴ  ᴀᴅᴠᴀɴᴄᴇ  ꜰɪʟᴇ  ʀᴇɴᴀᴍᴇʀ  ᴀɴᴅ  ᴄᴏɴᴠᴇʀᴛᴇʀ  ʙᴏᴛ  ᴡɪᴛʜ  ᴘᴇʀᴍᴀɴᴇɴᴛ  ᴀɴᴅ  ᴄᴜsᴛᴏᴍ  ᴛʜᴜᴍʙɴᴀɪʟ  sᴜᴘᴘᴏʀᴛ.\n\nᴊᴜsᴛ  sᴇɴᴅ  ᴍᴇ  ᴀɴʏ  ᴠɪᴅᴇᴏ  ᴏʀ ᴅᴏᴄᴜᴍᴇɴᴛ !!\n\nᴏᴡɴᴇʀ - @TechifyBots</b>"""
     keybord = InlineKeyboardMarkup([  
-                    [InlineKeyboardButton("📢 Updates", url="https://telegram.me/TechifyBots"),
-                    InlineKeyboardButton("💬 Support", url="https://telegram.me/TechifySupport")],
-                    [InlineKeyboardButton("🛠️ Help", callback_data='help'),
+                    [InlineKeyboardButton("📢 Updates", url="https://telegram.me/BotZFlix"),
+                    InlineKeyboardButton("💬 Support", url="https://telegram.me/BotZFlixSupport")],
+                    [InlineKeyboardButton("🛠️ Aide", callback_data='help'),
 		            InlineKeyboardButton("❤️‍🩹 About", callback_data='about')],
-                    [InlineKeyboardButton("🧑‍💻 Developer 🧑‍💻", url="https://telegram.me/TechifyBots")]
+                    [InlineKeyboardButton("🧑‍💻 Developer 🧑‍💻", url="https://telegram.me/kingcey")]
 		  ])
     await query.message.edit_text(text=text, reply_markup=keybord)
