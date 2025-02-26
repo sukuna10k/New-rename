@@ -76,7 +76,7 @@ async def donate(bot,update):
 
 @Client.on_callback_query(filters.regex('home'))
 async def home_callback_handler(bot, query):
-    text = f"""{query.from_user.mention} \n<b>ɪ  ᴀᴍ  ᴀɴ  ᴀᴅᴠᴀɴᴄᴇ  ꜰɪʟᴇ  ʀᴇɴᴀᴍᴇʀ  ᴀɴᴅ  ᴄᴏɴᴠᴇʀᴛᴇʀ  ʙᴏᴛ  ᴡɪᴛʜ  ᴘᴇʀᴍᴀɴᴇɴᴛ  ᴀɴᴅ  ᴄᴜsᴛᴏᴍ  ᴛʜᴜᴍʙɴᴀɪʟ  sᴜᴘᴘᴏʀᴛ.\n\nᴊᴜsᴛ  sᴇɴᴅ  ᴍᴇ  ᴀɴʏ  ᴠɪᴅᴇᴏ  ᴏʀ ᴅᴏᴄᴜᴍᴇɴᴛ !!\n\nᴏᴡɴᴇʀ - @TechifyBots</b>"""
+    text = f"""{query.from_user.mention} \n<b>Je <b> suis un outil avancé de renommage de fichiers et de conversion, avec un support de vignettes permanentes et personnalisées..\n\nJuste envoie-moi n'importe quelle vidéo ou document. !!\n<blockquote>Proprio @BotZFlix</blockquote></b>"""
     keybord = InlineKeyboardMarkup([  
                     [InlineKeyboardButton("📢 Updates", url="https://telegram.me/BotZFlix"),
                     InlineKeyboardButton("💬 Support", url="https://telegram.me/BotZFlixSupport")],
