@@ -23,7 +23,7 @@ async def delete_caption(client, message):
         await message.reply_text("Vous n'avez aucune légende ❌")
         return
     delcaption(int(message.chat.id))
-    await message.reply_text("Your Caption Successfully Deleted 🗑️")
+    await message.reply_text("Légende supprimé avec ||succès|| 🗑️")
                                       
                                       
                                        
@@ -31,6 +31,6 @@ async def delete_caption(client, message):
 async def see_caption(client, message): 
     caption = find(int(message.chat.id))[1]
     if caption:
-       await message.reply_text(f"<b><u>Your Caption:</b></u>\n\n<code>{caption}</code>")
+       await message.reply_text(f"<b><u>Ta légende:</b></u>\n\n<code>{caption}</code>")
     else:
-       await message.reply_text("You Don't Have Any Custom Caption ❌")
+       await message.reply_text("Tu n'a aucune légende personnalisée ❌")
