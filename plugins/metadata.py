@@ -7,9 +7,9 @@ from script import *
 
 
 ON = [[InlineKeyboardButton('Metadata On ✅', callback_data='metadata_1')], [
-    InlineKeyboardButton('Set Custom Metadata', callback_data='cutom_metadata')]]
+    InlineKeyboardButton('Personnaliser Metadata', callback_data='cutom_metadata')]]
 OFF = [[InlineKeyboardButton('Metadata Off ❌', callback_data='metadata_0')], [
-    InlineKeyboardButton('Set Custom Metadata', callback_data='cutom_metadata')]]
+    InlineKeyboardButton('Personnaliser Metadata', callback_data='cutom_metadata')]]
 
 
 @Client.on_message(filters.private & filters.command('metadata'))
@@ -20,7 +20,7 @@ async def handle_metadata(bot: Client, message: Message):
     user_metadata = find(int(message.chat.id))[3]
     await ms.delete()
     if bool_metadata:
-        return await message.reply_text(f"**Your Current Metadata :-**\n\n➜ `{user_metadata}` ",quote=True, reply_markup=InlineKeyboardMarkup(ON))
+        return await message.reply_text(f"**Vos métadonnées actuelles :-**\n\n➜ `{user_metadata}` ",quote=True, reply_markup=InlineKeyboardMarkup(ON))
     return await message.reply_text(f"**Your Current Metadata :-**\n\n➜ `{user_metadata}` ",quote=True, reply_markup=InlineKeyboardMarkup(OFF))
 
 
