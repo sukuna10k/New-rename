@@ -77,7 +77,7 @@ def TimeFormatter(milliseconds: int) -> str:
 PROGRESS_BAR = """\
 {5}
 
-<b>📁 Size</b> : {1} | {2}
-<b>⏳️ Done</b> : {0}%
-<b>🚀 Speed</b> : {3}/s
+<b>📁 Poids</b> : {1} | {2}
+<b>⏳️ Pourcentage</b> : {0}%
+<b>🚀 Vitesse</b> : {3}/s
 <b>⏰️ ETA</b> : {4} """
