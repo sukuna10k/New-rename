@@ -115,7 +115,7 @@ async def send_doc(client, message):
             used_limit(message.from_user.id, 0)
         remain = limit - used
         if remain < int(file.file_size):
-            await message.reply_text(f"100% Of Daily {humanbytes(limit)} Data Quota Exhausted.\n\n<b>File Size Detected :</b> {humanbytes(file.file_size)}\n<b>Used Daily Limit :</b> {humanbytes(used)}\n\nYou Have Only <b>{humanbytes(remain)}</b> Left On Your Account.\n\nIf U Want To Rename Large File Upgrade Your Plan", reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton("💳 Upgrade", callback_data="upgrade")]]))
+            await message.reply_text(f"100 % de quotidien {humanbytes(limit)} Quota de données épuisé.\n\n<b>Taille de fichier détectée :</b> {humanbytes(file.file_size)}\n<b>Limite quotidienne utilisée :</b> {humanbytes(used)}\n\nIl ne vous reste que <b>{humanbytes(remain)}</b> Restant sur votre compte\n\nSi vous souhaitez renommer un gros fichier, mettez à niveau votre plan", reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton("💳 Mettre à jour", callback_data="upgrade")]]))
             return
         if value < file.file_size:
             
@@ -148,6 +148,6 @@ async def send_doc(client, message):
             fileid = file.file_id
             total_rename(int(botid), prrename)
             total_size(int(botid), prsize, file.file_size)
-            await message.reply_text(f"""__What Do You Want Me To Do With This File ?__\n\n**File Name :** `{filename}`\n**File Size :** {filesize}\n**DC ID :** {dcid}""", reply_to_message_id=message.id, reply_markup=InlineKeyboardMarkup(
-                [[InlineKeyboardButton("📝 Renommer", callback_data="rename"),
-                  InlineKeyboardButton("✖️ Annuler", callback_data="cancel")]]))
+            await message.reply_text(f"""__Voulez Vous Renommer ce fichier ?__\n\n**Nom :** `{filename}`\n**Poids :** {filesize}\n**DC ID :** {dcid}""", reply_to_message_id=message.id, reply_markup=InlineKeyboardMarkup(
+                [[InlineKeyboardButton("📝 Oui", callback_data="rename"),
+                  InlineKeyboardButton("✖️ Non", callback_data="cancel")]]))
