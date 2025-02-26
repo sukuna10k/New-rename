@@ -19,9 +19,9 @@ LOG_CHANNEL = int(os.environ.get("LOG_CHANNEL", "-1002376378205"))
 
 
 # Mongo DB Database Config
-DATABASE_URL = os.environ.get("DATABASE_URL", "mongodb+srv://Aniflix:Lipun123@aniflix.q2wina5.mongodb.net/?retryWrites=true&w=majority&appName=Aniflix")
+DATABASE_URL = os.environ.get("DATABASE_URL", "mongodb+srv://botzflix:zflixteam@botzflix.p19sv.mongodb.net/?retryWrites=true&w=majority&appName=botzflix")
 DATABASE_NAME = os.environ.get("DATABASE_NAME", "botzflix")
 
 
 # Other Variables Config
-START_PIC = os.environ.get("START_PIC", "https://graph.org/file/ada3f739fed7efdbe7b08.jpg")
+START_PIC = os.environ.get("START_PIC", "https://envs.sh/tun.jpg")
