@@ -37,7 +37,7 @@ async def start(client, message):
             uploadlimit(message.from_user.id, 2147483652)
             usertype(message.from_user.id, "Free")
     if ends == None:
-        text = f"<b>User ID :</b> <code>{message.from_user.id}</code> \n<b>Name :</b> {message.from_user.mention} \n\n<b>🏷 Plan :</b> {user} \n\n✓ Upload 2GB Files \n✓ Daily Upload : {humanbytes(limit)} \n✓ Today Used : {humanbytes(used)} \n✓ Remain : {humanbytes(remain)} \n✓ Timeout : 2 Minutes \n✓ Parallel process : Unlimited \n✓ Time Gap : Yes \n\n<b>Validity :</b> Lifetime"
+        text = f"<b>Votre ID :</b> <code>{message.from_user.id}</code> \n<b>Nom :</b> {message.from_user.mention} \n\n<b>🏷 Plan :</b> {user} \n\n✓ Télécharger des fichiers de 2 Go \n✓ Téléchargement quotidien : {humanbytes(limit)} \n✓ Utilisé aujourd'hui : {humanbytes(used)} \n✓ Reste : {humanbytes(remain)} \n✓ Délai d'attente : 2 Minutes \n✓ Processus parallèle : illimité \n✓ Intervalle de temps : Yes \n\n<b>Validité :</b> Lifetime"
     else:
         normal_date = datetime.fromtimestamp(ends).strftime('%Y-%m-%d')
         text = f"<b>User ID :</b> <code>{message.from_user.id}</code> \n<b>Name :</b> {message.from_user.mention} \n\n<b>🏷 Plan :</b> {user} \n\n✓ Haute priorité. \n Télécharger des fichiers de 4 Go.\n✓ Daily Upload : {humanbytes(limit)} \n✓ Aujourd'hui utilisé. : {humanbytes(used)} \n✓ Remain : {humanbytes(remain)} \n✓ Délai d'attente : 0 Second \n✓ Processus parallèles : illimités. \n✓ Time Gap : Yes \n\n<b>Your Plan Ends On :</b> {normal_date}"
