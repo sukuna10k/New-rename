@@ -40,7 +40,7 @@ async def start(client, message):
         InlineKeyboardButton("💬 Support", url="https://telegram.me/BotZFlixSupport")],
         [InlineKeyboardButton("🛠️ Aide", callback_data='help'),
         InlineKeyboardButton("❤️‍🩹 About", callback_data='about')],
-        [InlineKeyboardButton("🧑‍💻 Developer 🧑‍💻", url="https://telegram.me/kingcey")]
+        [InlineKeyboardButton("♨️ Mis à jour premium ♨️", callback_data='upgarde')]
         ])
     
     await message.reply_photo(
