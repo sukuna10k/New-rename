@@ -65,7 +65,7 @@ async def send_doc(client, message):
         except UserNotParticipant:
             _newus = find_one(message.from_user.id)
             user = _newus["usertype"]
-            await message.reply_text("<b>Salut Mon cher \n\nTu dois rejoindre ma chaîne pour m'utiliser.\n\nVeuillez gentiment rejoindre la chaîne.</b>",
+            await message.reply_text("<b>Salut Toi Je suis princesse Hibara \n\nTu dois rejoindre ma chaîne pour m'utiliser.\n\nVeuillez gentiment rejoindre la chaîne.</b>",
                                      reply_to_message_id=message.id,
                                      reply_markup=InlineKeyboardMarkup([
                                          [InlineKeyboardButton("🔺 Rejoindre 🔺", url=f"https://t.me/{FORCE_SUBS}")]
