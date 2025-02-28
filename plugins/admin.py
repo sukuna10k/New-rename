@@ -30,7 +30,7 @@ async def buypremium(bot, message):
         [InlineKeyboardButton("✖️ Cancel ✖️",callback_data = "cancel")]
         ])
         
-    await message.reply_text("🦋 Select Plan To Upgrade...", quote=True, reply_markup=button)
+    await message.reply_text("🦋 Choisis le plan de mis à jour...", quote=True, reply_markup=button)
     
     
 
