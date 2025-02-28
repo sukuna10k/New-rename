@@ -5,7 +5,7 @@ import os
 # Required Variables Config
 API_ID = int(os.environ.get("API_ID", "24817837"))
 API_HASH = os.environ.get("API_HASH", "acd9f0cc6beb08ce59383cf250052686")
-BOT_TOKEN = os.environ.get("BOT_TOKEN", "8074880690:AAHlE1byWBOcy3LOhg_gbKbZWQ48_t1KEgQ")
+BOT_TOKEN = os.environ.get("BOT_TOKEN", "7307692677:AAGK834DvcyPcKf6RXP4-eEjKWxy_PZG2NU")
 ADMIN = int(os.environ.get("ADMIN", "7428552084"))
 
 
@@ -19,9 +19,9 @@ LOG_CHANNEL = int(os.environ.get("LOG_CHANNEL", "-1002376378205"))
 
 
 # Mongo DB Database Config
-DATABASE_URL = os.environ.get("DATABASE_URL", "mongodb+srv://botzflix:zflixteam@botzflix.p19sv.mongodb.net/?retryWrites=true&w=majority&appName=botzflix")
+DATABASE_URL = os.environ.get("DATABASE_URL", "mongodb+srv://tgbot:4KzEdxEl4YldwwFR@tg.vr8ef.mongodb.net/?retryWrites=true&w=majority&appName=Tg")
 DATABASE_NAME = os.environ.get("DATABASE_NAME", "botzflix")
 
 
 # Other Variables Config
-START_PIC = os.environ.get("START_PIC", "https://envs.sh/tun.jpg")
+START_PIC = os.environ.get("START_PIC", "https://envs.sh/i57.jpg")
