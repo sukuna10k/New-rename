@@ -76,7 +76,7 @@ async def donate(bot,update):
 
 @Client.on_callback_query(filters.regex('home'))
 async def home_callback_handler(bot, query):
-    text = f"""{query.from_user.mention} \n<b>Je <b> suis un outil avancé de renommage de fichiers et de conversion, avec un support de vignettes permanentes et personnalisées..\n\nJuste envoie-moi n'importe quelle vidéo ou document. !!\n<blockquote>Proprio @BotZFlix</blockquote></b>"""
+    text = f"""{query.from_user.mention} \n<b>Je suis Yor Kingcey ||forger|| l'épouse de roi kingcey je suis un bot puissant capable de renommé n'importe quel type de fichier, comme je le fait avec mes proies.\n\n\n┣⪼<blockquote>||Remercier mon époux de m'avoir créé||</b></blockquote>"""
     keybord = InlineKeyboardMarkup([  
                     [InlineKeyboardButton("📢 Updates", url="https://telegram.me/BotZFlix"),
                     InlineKeyboardButton("💬 Support", url="https://telegram.me/BotZFlixSupport")],
