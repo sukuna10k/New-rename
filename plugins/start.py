@@ -33,7 +33,7 @@ async def start(client, message):
     await asyncio.sleep(2)
     await loading_sticker_message.delete()
     
-    text = f"""{message.from_user.mention} \nJe <b> suis un outil avancé de renommage de fichiers et de conversion, avec un support de vignettes permanentes et personnalisées..\n\nJuste envoie-moi n'importe quelle vidéo ou document. !!\n<blockquote>Proprio @BotZFlix</b></blockquote>"""
+    text = f"""{message.from_user.mention} \nJe suis Yor Kingcey ||forger|| l'épouse de roi kingcey je suis un bot puissant capable de renommé n'importe quel type de fichier, comme je le fait avec mes proies.\n\n\n┣⪼<blockquote>||Remercier mon époux de m'avoir créé||</b></blockquote>"""
     
     button = InlineKeyboardMarkup([
         [InlineKeyboardButton("📢 Updates", url="https://telegram.me/BotZFlix"),
