@@ -264,10 +264,10 @@ async def vid(bot, update):
             except:
                 return
     else:
-        await ms.edit("🚀 Try To Upload...  ⚡")
+        await ms.edit("🚀 Televersement...  ⚡")
         c_time = time.time()
         try:
-            await bot.send_video(update.from_user.id, video=metadata_path if _bool_metadata else file_path, thumb=ph_path, duration=duration, caption=caption, progress=progress_for_pyrogram, progress_args=("🚀 Try To Uploading...  ⚡",  ms, c_time))
+            await bot.send_video(update.from_user.id, video=metadata_path if _bool_metadata else file_path, thumb=ph_path, duration=duration, caption=caption, progress=progress_for_pyrogram, progress_args=("🚀 Telechargement...  ⚡",  ms, c_time))
             await ms.delete()
             
             os.remove(file_path)
@@ -298,10 +298,10 @@ async def aud(bot, update):
     hinata = message
     total_used = used + int(file.file_size)
     used_limit(update.from_user.id, total_used)
-    ms = await update.message.edit("🚀 Try To Download...  ⚡")
+    ms = await update.message.edit("🚀 Telechargement...  ⚡")
     c_time = time.time()
     try:
-        path = await bot.download_media(message=file, progress=progress_for_pyrogram, progress_args=("🚀 Try To Downloading...  ⚡",  ms, c_time))
+        path = await bot.download_media(message=file, progress=progress_for_pyrogram, progress_args=("🚀 Telechargement...  ⚡",  ms, c_time))
     except Exception as e:
         neg_used = used - int(file.file_size)
         used_limit(update.from_user.id, neg_used)
@@ -316,7 +316,7 @@ async def aud(bot, update):
         metadata_path = f"Metadata/{new_filename}"
         await add_metadata(path, metadata_path, metadata, ms)
     else:
-        await ms.edit("🚀 Mode Changing...  ⚡")
+        await ms.edit("🚀 Changement de mode...  ⚡")
         
     splitpath = path.split("/downloads/")
     dow_file_name = splitpath[1]
@@ -344,7 +344,7 @@ async def aud(bot, update):
         img = Image.open(ph_path)
         img.resize((320, 320))
         img.save(ph_path, "JPEG")
-        await ms.edit("🚀 Try To Upload...  ⚡")
+        await ms.edit("🚀 Televersement...  ⚡")
         c_time = time.time()
         try:
             await bot.send_audio(update.message.chat.id, audio=metadata_path if _bool_metadata else file_path, caption=caption, thumb=ph_path, duration=duration, progress=progress_for_pyrogram, progress_args=("🚀 Try To Uploading...  ⚡",  ms, c_time))
