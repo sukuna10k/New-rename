@@ -1,13 +1,8 @@
 from pyrogram import Client, idle
 from plugins.cb_data import app as Client2
 from config import *
-import pyromod
-import pyrogram.utils
 from flask import Flask
 import threading
-
-pyrogram.utils.MIN_CHAT_ID = -999999999999
-pyrogram.utils.MIN_CHANNEL_ID = -100999999999999
 
 bot = Client("Renamer", bot_token=BOT_TOKEN, api_id=API_ID, api_hash=API_HASH, plugins=dict(root='plugins'))
 
@@ -26,11 +21,12 @@ if STRING_SESSION:
     for app in apps:
         app.start()
     
-    # Lancer Flask dans un thread séparé
-    threading.Thread(target=run_flask).start()
+    # Lancer Flask dans un thread séparé (daemon=True pour éviter les blocages)
+    flask_thread = threading.Thread(target=run_flask, daemon=True)
+    flask_thread.start()
     
     idle()
-
+    
     for app in apps:
         app.stop()
 else:
